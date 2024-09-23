@@ -27,11 +27,22 @@ using namespace std;
 
 int main()
 {
-    double gallons = 15.0;
-    double milesDriven = 375.0;
-    double mpg = milesDriven / gallons;
+    double gallons,milesDriven;
+    
+    cout << "Please enter the number of gallons of gas:  ";
+    cin >> gallons;
 
-    cout << "The car gets " << mpg << " miles per gallon." << endl;
+    cout << "Please enter the number of miles driven:  ";
+    cin >> milesDriven;
+
+    if (gallons != 0) {
+        double mpg = milesDriven / gallons;
+
+        cout << "The car gets " << mpg << " miles per gallon." << endl;
+    }
+    else {
+        cout << "The number of gallons cannot be zero." << endl;
+    }
 
     return 0;
 }
